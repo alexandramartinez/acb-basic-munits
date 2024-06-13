@@ -13,3 +13,15 @@ Please note that you will need Enterprise credentials to access this feature on 
 To make sure your credentials work properly, go to [this link](https://repository.mulesoft.org/nexus/content/repositories/releases-ee/) and use your credentials to sign in.
 
 You will use those credentials in your Maven's `settings.xml` file. You can use this [`example-settings.xml`](/example-settings.xml) file as a guide to set up your own or refer to [this link](https://help.salesforce.com/s/articleView?id=001114523&type=1) for more information.
+
+## MULE_EE for debugging
+
+If you're running the MULE_CE (community edition) runtime, you will be able to run the tests but you won't be able to debug them.
+
+To make sure you're running the enterprise edition, you can add the following line in your `mule-artifact.json`.
+
+```
+"requiredProduct": "MULE_EE"
+```
+
+Refer to [this file](/mule-artifact.json) for an example of how this looks like.
