@@ -11,13 +11,11 @@
             <id>releases-ee</id>
         </server>
     </servers>
-
     <profiles>
         <profile>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-
             <repositories>
                 <repository>
                     <id>releases-ee</id>
