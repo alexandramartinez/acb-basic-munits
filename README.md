@@ -16,7 +16,7 @@ You will use those credentials in your Maven's `settings.xml` file. You can use 
 
 ## MULE_EE for debugging
 
-If you're running the MULE_CE (community edition) runtime, you will be able to run the tests but you won't be able to debug them.
+If you're running the `MULE_CE` (community edition) runtime, you will be able to run the tests but you won't be able to debug them.
 
 To make sure you're running the enterprise edition, you can add the following line in your `mule-artifact.json`.
 
@@ -25,3 +25,11 @@ To make sure you're running the enterprise edition, you can add the following li
 ```
 
 Refer to [this file](/mule-artifact.json) for an example of how this looks like.
+
+## Other considerations
+
+If you're running Mule 4.7 and/or Java 17 for your project, make sure to use the latest versions of the **Mule Maven Plugin** and **MUnit**.
+
+You can set these versions in your `pom.xml` and check the latest versions using the following links:
+- [Mule Maven Plugin Release Notes](https://docs.mulesoft.com/release-notes/mule-maven-plugin/mule-maven-plugin-release-notes)
+- [MUnit Release Notes](https://docs.mulesoft.com/munit/latest/munit-release-notes)
