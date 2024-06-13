@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+    <munit:config name="test-suite.xml" />
+    <munit:test name="payload-is-true" doc:id="c434dc9e-3dbb-4d26-8344-77889fa8a76a" description="Test">
+        <munit:execution>
+            <set-payload value="#[true]" doc:name="true payload" doc:id="dc296ed8-bd34-436d-855e-8a0ef25b5e02" />
+            <flow-ref doc:name="" doc:id="6b40cd38-8399-406a-ad6b-5e487ad3161d" name="name1" />
+        </munit:execution>
+        <munit:validation>
+            <munit-tools:assert-equals doc:name="Assert equals" doc:id="ad9e64b3-2f9f-4168-8d6c-cf80684e9f93" actual="#[payload]" expected="the expression is true" />
+        </munit:validation>
+    </munit:test>
+    <munit:test name="payload-is-false" doc:id="4bc8db2a-1ac2-4a1d-be06-202e56546727" description="Test">
+        <munit:execution>
+            <set-payload value="#[false]" doc:name="false payload" doc:id="65d2c260-0bd3-40a2-b1c1-9679718074e9" />
+            <flow-ref doc:name="" doc:id="91325d96-0f19-4555-a05b-6abdaa305ba2" name="name1" />
+        </munit:execution>
+        <munit:validation>
+            <munit-tools:assert-equals doc:name="Assert equals" doc:id="09e9b9af-8de8-40e3-9445-9386aaf19084" actual="#[payload]" expected="the expression is false" />
+        </munit:validation>
+    </munit:test>
+    <munit:test name="no-payload" doc:id="02fecebe-07f6-4a20-842a-e9740524d5f0" description="Test">
+        <munit:execution>
+            <flow-ref doc:name="" doc:id="156a633e-5366-4a3a-ab65-4de88ee595d9" name="name1" />
+        </munit:execution>
+        <munit:validation>
+            <munit-tools:assert-equals doc:name="Assert equals" doc:id="ae63783a-22bf-485e-a3bf-dbefbc00209c" actual="#[payload]" expected="the expression is false" />
+        </munit:validation>
+    </munit:test>
+    <munit:test name="failed-test" doc:id="ac9696ec-eacc-4bb9-a4e9-0e063ad418c8" description="Test">
+        <munit:execution>
+            <flow-ref doc:name="" doc:id="03a0b49a-2ef3-42aa-ac16-969d8a789660" name="name1" />
+        </munit:execution>
+        <munit:validation>
+            <munit-tools:assert-equals doc:name="Assert equals" doc:id="6d214bf6-717d-482d-af68-468e340724e3" actual="#[payload]" expected="123" />
+        </munit:validation>
+    </munit:test>
+</mule>
