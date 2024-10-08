@@ -1,6 +1,8 @@
 # Basic MUnits for ACB
 
-> [!IMPORTANT]UPDATE (Oct '24 release)
+> [!IMPORTANT]
+> **UPDATE (Oct '24 release)**
+> 
 > Make sure you're using any of the following Mule Runtime versions 
 > - `4.6.7+`
 > - `4.7.3+`
