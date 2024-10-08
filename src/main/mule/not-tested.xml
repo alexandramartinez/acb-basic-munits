@@ -1,0 +1,7 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://www.mulesoft.org/schema/mule/http" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+	http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+  <flow name="not-tested-flow">
+    <http:listener path="nottested" config-ref="HTTP_Listener_config" doc:name="Listener" doc:id="hwupsu" />
+    <logger doc:name="Logger" doc:id="geltdx" />
+  </flow>
+</mule>

@@ -5,17 +5,17 @@
   <http:listener-config name="HTTP_Listener_config">
     <http:listener-connection host="0.0.0.0" port="8081" />
   </http:listener-config>
-  <flow name="name1">
+  <flow name="flow1">
     <http:listener path="test" config-ref="HTTP_Listener_config" doc:name="Listener" doc:id="znkpds" />
-    <logger doc:name="Logger" doc:id="ovmomj" message="#[payload]" />
+    <logger doc:name="Logger - START" doc:id="ovmomj" message="#[payload]" />
     <choice doc:name="Choice" doc:id="trqnru">
       <when doc:name="payload is true" expression="#[payload ~= true]">
-        <set-payload value="the expression is true" doc:name="Set payload" doc:id="ngigoh" />
+        <set-payload value="the expression is true" doc:name="Set payload TRUE" doc:id="ngigoh" />
       </when>
       <otherwise doc:name="payload is false">
-        <set-payload value="the expression is false" doc:name="Set payload" doc:id="ecjxdg" />
+        <set-payload value="the expression is false" doc:name="Set payload FALSE" doc:id="ecjxdg" />
       </otherwise>
     </choice>
-    <logger doc:name="Logger" doc:id="uneszs" message="#[payload]" />
+    <logger doc:name="Logger - END" doc:id="uneszs" message="#[payload]" />
   </flow>
 </mule>

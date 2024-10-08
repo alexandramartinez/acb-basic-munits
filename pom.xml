@@ -9,8 +9,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <munit.version>3.2.0</munit.version>
-        <mule.maven.plugin.version>4.2.0</mule.maven.plugin.version>
+        <mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+        <munit.version>3.3.1</munit.version>
     </properties>
     <build>
         <plugins>
@@ -44,10 +44,11 @@
                 </executions>
                 <configuration>
                     <coverage>
-                        <runCoverage>true</runCoverage>
                         <formats>
                             <format>html</format>
+                            <format>console</format>
                         </formats>
+                        <runCoverage>true</runCoverage>
                     </coverage>
                 </configuration>
             </plugin>
@@ -86,10 +87,11 @@
     </pluginRepositories>
     <dependencies>
         <dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-http-connector</artifactId>
-            <version>1.9.2</version>
+            <groupId>com.mulesoft.munit</groupId>
+            <artifactId>munit-tools</artifactId>
+            <version>${munit.version}</version>
             <classifier>mule-plugin</classifier>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.mulesoft.munit</groupId>
@@ -99,17 +101,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.mulesoft.munit</groupId>
-            <artifactId>munit-tools</artifactId>
-            <version>${munit.version}</version>
-            <classifier>mule-plugin</classifier>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.mule.weave</groupId>
             <artifactId>assertions</artifactId>
             <version>1.2.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mule.connectors</groupId>
+            <artifactId>mule-http-connector</artifactId>
+            <version>1.10.0</version>
+            <classifier>mule-plugin</classifier>
         </dependency>
     </dependencies>
 </project>

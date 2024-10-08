@@ -7,7 +7,7 @@
     <munit:config name="test-suite-2.xml" />
     <munit:test name="empty-test" doc:id="fa940e2d-e20f-4c54-9713-a3786b4e5ff5" description="Test">
         <munit:execution>
-            <flow-ref doc:name="" doc:id="e979359c-7914-44f6-88bb-b100f004ee80" name="name1" />
+            <flow-ref doc:name="" doc:id="e979359c-7914-44f6-88bb-b100f004ee80" name="flow1" />
         </munit:execution>
         <munit:validation>
             <munit-tools:assert-equals doc:name="Assert equals" doc:id="14fe67a5-260d-4bd5-b205-acfebdf66539" actual="#[1]" expected="#[1]" />
