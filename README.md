@@ -18,6 +18,10 @@ Releases:
 Videos:
 - [Support for Existing MUnit Tests in Anypoint Code Builder (June'24)](https://youtu.be/6Kvg4vNoR7s)
 
+## Similar repos
+
+[![](https://github-readme-stats.vercel.app/api/pin/?username=alexandramartinez&repo=my-process-api-munits&theme=holi)](https://github.com/alexandramartinez/my-process-api-munits)
+
 ## Enterprise credentials
 
 **Updated after October '24 release:**
